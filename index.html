@@ -1,0 +1,48 @@
+<h1>To stop being online, try the following:</h1>
+
+<section id="windows-instructions">
+  <h2>Windows</h2>
+  <ol>
+    <li>Press the Windows key on your keyboard.</li>
+    <li>Type "Powershell" and press Enter to open Powershell.</li>
+    <li>Paste the following: <code><pre>Start-Process powershell -ArgumentList '-Command "Disable-NetAdapter -Name * -Confirm:$false"' -Verb RunAs</pre></code></li>
+    <li>Press Enter. You will be asked for your password.</li>
+  <ol>
+</section>
+
+<section id="macos-instructions">
+  <h2>macOS</h2>
+  <ol>
+    <li>Press CMD-space on your keyboard.</li>
+    <li>Type "Terminal" and press Enter to open Terminal.</li>
+    <li>Paste the following: <code><pre>for i in $(ifconfig -l); do sudo ifconfig "$i" down 2>/dev/null; done</pre></code></li>
+    <li>Press Enter. You will be asked for your password.</li>
+  </ol>
+</section>
+
+<section id="linux-instructions">
+  <h2>Linux</h2>
+  <ol>
+    <li>Open a terminal emulator.</li>
+    <li>Paste the following: <code><pre>sudo ip route del default ; sudo ip -6 route del default</pre></code></li>
+    <li>Press Enter. You may be asked for your password.</li>
+  </ol>
+</section>
+
+<section id="ios-instructions">
+  <h2>iOS</h2>
+  <ol>
+    <li>Go to Settings.</li>
+    <li>In the search bar, type "Airplane Mode". Tap the first result, which will be "Airplane Mode".</li>
+    <li>Toggle Airplane Mode to on.</li>
+  </ol>
+</section>
+
+<section id="android-instructions">
+  <h2>Android</h2>
+  <ol>
+    <li>Swipe down from the top of the screen to reveal Quick Settings.</li>
+    <li>Look for the airplane icon and tap it.</li>
+  </ol>
+</section>
+
